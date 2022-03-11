@@ -1,11 +1,12 @@
 
-body,html{
+body, html {
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     background: #718096 !important;
 }
+
 .navbar {
     overflow: hidden;
     background-color: #333;
@@ -14,9 +15,28 @@ body,html{
     width: 100%; /* Full width */
 }
 
-p {
-    position:fixed;
+.data-from-api {
+    display: inline; /* the default for span */
+
 }
+
+.data-from-api a {
+    text-decoration: none;
+    color: #cbd5e0;
+    padding-right: 20px;
+    padding-left: 0;
+
+
+}
+
+.data-from-api h1 {
+    text-align: center;
+}
+
+.data-from-api a:hover {
+    color: #1a202c;
+}
+
 .navbar a {
     float: left;
     display: block;
@@ -36,7 +56,8 @@ p {
 .main {
     margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
-.searchbar{
+
+.searchbar {
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
@@ -45,30 +66,30 @@ p {
     padding: 10px;
 }
 
-.search_input{
+.search_input {
     color: white;
     border: 0;
     outline: 0;
     background: none;
     width: 0;
-    caret-color:transparent;
+    caret-color: transparent;
     line-height: 40px;
     transition: width 0.4s linear;
 }
 
-.searchbar:hover > .search_input{
+.searchbar:hover > .search_input {
     padding: 0 10px;
     width: 450px;
-    caret-color:red;
+    caret-color: red;
     transition: width 0.4s linear;
 }
 
-.searchbar:hover > .search_icon{
+.searchbar:hover > .search_icon {
     background: white;
     color: #e74c3c;
 }
 
-.search_icon{
+.search_icon {
     height: 40px;
     width: 40px;
     float: right;
@@ -76,7 +97,7 @@ p {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    color:white;
-    text-decoration:none;
+    color: white;
+    text-decoration: none;
 }
 

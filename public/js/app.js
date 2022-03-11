@@ -2162,27 +2162,34 @@ module.exports = {
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // https://www.themoviedb.org/settings/api
+// 15b6c53c504f98c42f7cd3f0da4bb121
+
 
 $(document).ready(function () {
   $("input").keyup(function () {});
   $('.search_icon').click(function () {
     var prefix = $('.search_input').val();
-
-    var _token = $('meta[name="csrf-token"]').attr('content');
-
-    console.log(_token);
-    console.log("clicked");
+    $(".data-from-api").empty();
+    $.ajaxSetup({
+      headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+    });
+    $(".data-from-api").append("<h1>Movie list</h1>");
     $.ajax({
-      type: 'POST',
+      method: 'post',
       url: '/api',
       data: {
-        search: prefix,
-        _token: _token
+        search: prefix
       },
       success: function success(data) {
         console.log(data);
-      }
+        $.each(data.data.results, function (key, value) {
+          $(".data-from-api").append("<a href='/info' calss = 'movie-info'>" + value.original_title + "</a>");
+        });
+      },
+      timeout: 5000
     });
   });
 });
