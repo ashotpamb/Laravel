@@ -8,6 +8,9 @@
             <p><h2>Overview</h2>{{$item['overview']}}</p>
             <p><h2>Popularity</h2>{{$item['popularity']}}</p>
             <p><h2>Vote average</h2>{{$item['vote_average']}}</p>
+            @if(isset($item['check']))
+                <p><h2>Check</h2>{{$item['check']}}</p>
+            @endif
         @endforeach
     @endif
 </div>
