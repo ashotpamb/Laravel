@@ -10,6 +10,7 @@ class Movie extends Model
     use HasFactory;
 
     protected $table = 'movies';
+
     public $timestamps = false;
 
     public $fillable = [
