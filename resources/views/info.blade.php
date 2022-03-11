@@ -12,6 +12,9 @@
                 <p><h2>Check</h2>{{$item['check']}}</p>
             @endif
         @endforeach
+    @else
+        <h2>No movie to show</h2>
     @endif
+
 </div>
 </body>
