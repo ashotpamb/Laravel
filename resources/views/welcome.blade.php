@@ -1,4 +1,4 @@
-@include('includes.header')
+@extends('includes.header')
 @section("title","Home")
 <body>
 <div class="container h-50">

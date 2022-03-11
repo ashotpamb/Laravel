@@ -17,6 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::post("/api", [\App\Http\Controllers\ApiController::class, "index"])->name('ajax');
-Route::get("/info", function () {
-    return view('info');
-})->name('info');
+Route::get("/info", [\App\Http\Controllers\InfoController::class, "index"])->name('info');

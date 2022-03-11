@@ -23,8 +23,7 @@ $(document).ready(function () {
             success: function (data) {
                 console.log(data)
                 $.each(data.data.results, function (key, value) {
-                    $(".data-from-api").append("<a href='/info' calss = 'movie-info'>" + value.original_title + "</a>")
-
+                    $(".data-from-api").append("<a href='/info?id=" + value.id + "&prefix=" + prefix + "'calss = 'movie-info'>" + value.original_title + "</a>")
                 })
             },
             timeout: 5000,
