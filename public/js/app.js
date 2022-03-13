@@ -2167,30 +2167,34 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // https:
 
 
 $(document).ready(function () {
-  $("input").keyup(function () {});
-  $('.search_icon').click(function () {
-    var prefix = $('.search_input').val();
-    $(".data-from-api").empty();
-    $.ajaxSetup({
-      headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-      }
-    });
-    $(".data-from-api").append("<h1>Movie list</h1>");
-    $.ajax({
-      method: 'post',
-      url: '/api',
-      data: {
-        search: prefix
-      },
-      success: function success(data) {
-        console.log(data);
-        $.each(data.data.results, function (key, value) {
-          $(".data-from-api").append("<a href='/info?id=" + value.id + "&prefix=" + prefix + "'calss = 'movie-info'>" + value.original_title + "</a>");
-        });
-      },
-      timeout: 5000
-    });
+  $("input").keyup(function () {
+    $('.preloader').css('display', 'block');
+    setTimeout(function () {
+      var prefix = $('.search_input').val();
+      $(".movie-list").empty();
+      $.ajaxSetup({
+        headers: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+      });
+      $.ajax({
+        method: 'post',
+        url: '/search',
+        data: {
+          search: prefix
+        },
+        beforeSend: function beforeSend() {
+          $('.preloader').css('display', 'block');
+        },
+        success: function success(data) {
+          // var data = JSON.stringify(data)
+          console.log(data);
+          console.log(data.view);
+          $(".movie-list").html(data.view);
+          $('.preloader').css('display', 'none');
+        }
+      });
+    }, 3000);
   });
 });
 

@@ -4,7 +4,6 @@ body, html{
     width: 100%;
     margin: 0;
     padding: 0;
-    background: #718096;
 }
 
 .navbar {
@@ -21,7 +20,6 @@ body, html{
 }
 .movie-info {
     margin-top: 500px;
-    background-color: #cbd5e0;
 
 }
 .movie-info p{
@@ -111,4 +109,122 @@ body, html{
     border-radius: 50%;
     color: white;
     text-decoration: none;
+}
+
+.movies, .movie {
+    margin-top: 30px;
+}
+
+.movie_card {
+    box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+    border: 1px solid rgba(var(--lightGrey), 1);
+    background-color: #fff;
+    margin: 10px;
+}
+.movie_card .card-body {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.movie_card .card-body .item_title {
+    margin: 0;
+    width: 100%;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+    margin-bottom: 30px;
+    font-size: 160%;
+    margin-top: 25px;
+}
+
+.movie_card .card-body .item_title a {
+    font-weight: 700;
+    color: #000;
+}
+
+.movie_card .card-body .item_release_date {
+    position: absolute;
+    bottom: 5px;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,0.6);
+}
+
+.movie_card-image {
+    width: 100%;
+    min-height: 282px;
+}
+
+.movie_card-image img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.movie_card .card-body {
+    position: relative;
+}
+
+.movie_card .card-body .votes_average {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #353b48;
+    color: #ffffff;
+    position: absolute;
+    top: -40px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.search_icon {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search_icon:hover {
+    background-color: #fff;
+    color: #353b48;
+}
+
+
+.movie {
+    border-bottom: 1px solid var(--primaryColor);
+    background-position: right -200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.movie_poser {
+    padding: 30px;
+    background-image: linear-gradient(to right, rgba(220.5, 241.5, 241.5, 1) 150px, rgba(220.5, 241.5, 241.5, 0.84) 100%);
+}
+
+.movie_img {
+    border-width: 0px;
+    max-width: 100%;
+    width: 300px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.movie_img img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.movie_title {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.movie_desc h3 {
+    margin: 20px 0;
+    font-weight: 600;
+    font-size: 1.3em;
 }

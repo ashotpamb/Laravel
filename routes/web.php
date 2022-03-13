@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post("/api", [\App\Http\Controllers\ApiController::class, "index"])->name('ajax');
-Route::get("/info", [\App\Http\Controllers\InfoController::class, "index"])->name('info');
+Route::post("/search", [\App\Http\Controllers\SearchController::class, "movies"])->name('ajax');
+Route::get("/movie/{id}", [\App\Http\Controllers\MoviesController::class, "show"])->name('show-movie');
+Route::get("/list", [\App\Http\Controllers\SearchController::class, "listing"])->name('movie_list');

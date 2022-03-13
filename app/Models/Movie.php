@@ -15,11 +15,14 @@ class Movie extends Model
 
     public $fillable = [
         'movie_id',
-        'original_title',
+        'title',
         'overview',
         'popularity',
         'release_date',
         'vote_average',
+        'budget',
+        'backdrop_path',
+        'poster_path'
     ];
 
 }
