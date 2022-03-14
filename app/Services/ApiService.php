@@ -3,8 +3,17 @@
 namespace App\Services;
 
 
+use App\Services\logs\LogService;
+
 class ApiService
 {
+    private LogService $logService;
+
+    public function __construct(LogService $logService)
+    {
+
+        $this->logService = $logService;
+    }
 
     public function getApi($url)
     {
@@ -16,6 +25,9 @@ class ApiService
         curl_close($ch);
 
         $obj = json_decode($result, true);
+        if (empty($obj['result'])) {
+            $this->logService->addLog();
+        }
         return $obj;
     }
 
