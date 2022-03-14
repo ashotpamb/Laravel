@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('popularity');
             $table->string('release_date');
             $table->string('vote_average');
-            $table->string('budget');
-            $table->string('backdrop_path');
-            $table->string('poster_path');
+            $table->string('budget')->nullable();
+            $table->string('backdrop_path')->nullable();
+            $table->string('poster_path')->nullable();
         });
     }
 

@@ -9,6 +9,7 @@ class MovieService
 {
     public function getMovie(ApiService $apiService, $id)
     {
+        $apiKey = env("MOVIE_API_KEY");
         if (!isset($id)) {
             return;
         }
@@ -22,7 +23,7 @@ class MovieService
             if ($movie != null) {
                 $data = $movie;
             } else {
-                $url = "https://api.themoviedb.org/3/movie/" . $movieId . "?api_key=15b6c53c504f98c42f7cd3f0da4bb121&&language=en-US";
+                $url = "https://api.themoviedb.org/3/movie/" . $movieId . "?api_key=".$apiKey."&language=en-US";
                 $data = $apiService->getApi($url);
                 $this->addMovieDB($data, $movieId);
 

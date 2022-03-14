@@ -26,6 +26,13 @@
                         </ul>
                     </div>
                 @endif
+                    @if (Session::get('message') !== null)
+                        <div class="alert alert-danger">
+                            <ul>
+                                <li>{{Session::get('message')}}</li>
+                            </ul>
+                        </div>
+                    @endif
             </div>
         </div>
     </div>

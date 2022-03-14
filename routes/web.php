@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\CheckLanguage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,4 @@ Route::get('/', function () {
 });
 Route::post("/search", [\App\Http\Controllers\SearchController::class, "movies"])->name('ajax');
 Route::get("/movie/{id}", [\App\Http\Controllers\MoviesController::class, "show"])->name('show-movie');
-Route::get("/list", [\App\Http\Controllers\SearchController::class, "listing"])->name('movie_list');
+Route::get("/list", [\App\Http\Controllers\SearchController::class, "listing"])->middleware(CheckLanguage::class)->name('movie_list');

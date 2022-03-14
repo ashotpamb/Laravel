@@ -229,3 +229,16 @@ body, html{
     font-size: 1.3em;
 }
 
+.content .movie-list {
+    margin-top: 50px;
+    padding: 10px;
+
+}
+.content .movie-list a{
+    font-size: medium;
+    color: black;
+}
+.content .movie-list a:hover{
+    color: cadetblue;
+}
+

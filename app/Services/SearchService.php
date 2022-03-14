@@ -8,9 +8,10 @@ class SearchService
 
     public function getAllMovies(ApiService $apiService)
     {
+        $apiKey = env("MOVIE_API_KEY");
         if (isset($_POST['search'])) {
             $prefix = $_POST['search'];
-            $url = "https://api.themoviedb.org/3/search/movie?api_key=15b6c53c504f98c42f7cd3f0da4bb121&language=en-US&page=1&include_adult=false&query=" . $prefix;
+            $url = "https://api.themoviedb.org/3/search/movie?api_key=".$apiKey."&language=en-US&page=1&include_adult=false&query=" . $prefix;
             $data = $apiService->getApi($url);
 
             $data['view'] = view('search.simple_view', [

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53ee235d9ec2d3c3f97b6919a83007b5",
+    "content-hash": "f044ed81af5d6d0fd41bdcb2c0821150",
     "packages": [
         {
             "name": "brick/math",
@@ -1791,6 +1791,71 @@
             "time": "2022-02-13T18:13:33+00:00"
         },
         {
+            "name": "nette/neon",
+            "version": "v2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/neon.git",
+                "reference": "5e72b1dd3e2d34f0863c5561139a19df6a1ef398"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/neon/zipball/5e72b1dd3e2d34f0863c5561139a19df6a1ef398",
+                "reference": "5e72b1dd3e2d34f0863c5561139a19df6a1ef398",
+                "shasum": ""
+            },
+            "require": {
+                "ext-iconv": "*",
+                "ext-json": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "tracy/tracy": "^2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "? Nette NEON: encodes and decodes NEON file format.",
+            "homepage": "http://ne-on.org",
+            "keywords": [
+                "export",
+                "import",
+                "neon",
+                "nette",
+                "yaml"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/neon/issues",
+                "source": "https://github.com/nette/neon/tree/v2.4"
+            },
+            "time": "2018-03-21T12:12:21+00:00"
+        },
+        {
             "name": "nette/schema",
             "version": "v1.2.2",
             "source": {
@@ -2792,6 +2857,97 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "spell-checker/dictionary-en",
+            "version": "v0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spell-checker/dictionary-en.git",
+                "reference": "7f355c831c7e2f768ccf90eb35ae19ed950dbfbe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spell-checker/dictionary-en/zipball/7f355c831c7e2f768ccf90eb35ae19ed950dbfbe",
+                "reference": "7f355c831c7e2f768ccf90eb35ae19ed950dbfbe",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "0BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Vlasta Neubauer",
+                    "homepage": "http://www.paranoiq.cz"
+                }
+            ],
+            "description": "English dictionary for spell-checker and PhpStorm/InteliJ",
+            "homepage": "https://github.com/spell-checker/dictionary-en",
+            "support": {
+                "issues": "https://github.com/spell-checker/dictionary-en/issues",
+                "source": "https://github.com/spell-checker/dictionary-en/tree/master"
+            },
+            "time": "2018-03-09T09:03:47+00:00"
+        },
+        {
+            "name": "spell-checker/spell-checker",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spell-checker/spell-checker.git",
+                "reference": "8ae480bbd6dc1924ef8d1c41c5e0a2cc65d61599"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spell-checker/spell-checker/zipball/8ae480bbd6dc1924ef8d1c41c5e0a2cc65d61599",
+                "reference": "8ae480bbd6dc1924ef8d1c41c5e0a2cc65d61599",
+                "shasum": ""
+            },
+            "require": {
+                "nette/neon": "~2.4",
+                "php": ">=7.1.0",
+                "spell-checker/dictionary-en": "~0.1"
+            },
+            "require-dev": {
+                "consistence/coding-standard": "2.2.1",
+                "jakub-onderka/php-console-highlighter": "~0.3",
+                "jakub-onderka/php-parallel-lint": "~0.9",
+                "nette/tester": "~2.0",
+                "phing/phing": "~2.16",
+                "phpstan/phpstan": "~0.8",
+                "slevomat/coding-standard": "4.0.0",
+                "squizlabs/php_codesniffer": "3.1.0",
+                "tracy/tracy": "~2.4"
+            },
+            "bin": [
+                "spell-checker"
+            ],
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src",
+                    "tests"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Vlasta Neubauer",
+                    "homepage": "http://www.paranoiq.cz"
+                }
+            ],
+            "description": "Multi-language code and text spell checker in PHP",
+            "homepage": "http://github.com/spell-checker/spell-checker",
+            "support": {
+                "issues": "https://github.com/spell-checker/spell-checker/issues",
+                "source": "https://github.com/spell-checker/spell-checker/tree/master"
+            },
+            "time": "2017-10-13T10:28:21+00:00"
         },
         {
             "name": "symfony/console",
